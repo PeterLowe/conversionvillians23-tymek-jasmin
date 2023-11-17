@@ -7,6 +7,7 @@ char printMenu(); //signing PrintMenu
 void fahrenheitToCelcius(); // signing fahrenheitToCelcius
 void centimetersToFeetInches(); //signing centimetersToFeetInches
 void degreesToRadians(); //singing degrees
+void stoneAndPoundsToKilograms(); // signing stoneAndPoundsToKilograms
 
 int main()
 {
@@ -30,6 +31,11 @@ int main()
 
 
 
+	if (userChoice == 'e')
+	{
+		stoneAndPoundsToKilograms();
+	}
+
 	return 1;
 }
 
@@ -51,7 +57,7 @@ char printMenu() // written by both
 	return choice;
 }
 
-void fahrenheitToCelcius()
+void fahrenheitToCelcius() // written by jasmin
 {
 	// variables
 	float fahrenheit = 0.0f;
@@ -100,4 +106,24 @@ void degreesToRadians() //written by tymek
 	radians = degrees * (3.14159 / 180);
 
 	std::cout << degrees << "degrees in radians is " << radians;
+}
+
+void stoneAndPoundsToKilograms() // written by jasmin
+{
+	// variables
+	float stones = 0.0f;
+	float pounds = 0.0f;
+	float kilograms = 0.0f;
+
+	// user input
+	std::cout << "Enter your weight in stones: ";
+	std::cin >> stones;
+	std::cout << "Enter your weight in pounds: ";
+	std::cin >> pounds;
+
+	// math
+	kilograms = (stones / 0.15747) + (pounds / 2.2046);
+
+	// result
+	std::cout << "Your weight in kilograms is " << kilograms;
 }
