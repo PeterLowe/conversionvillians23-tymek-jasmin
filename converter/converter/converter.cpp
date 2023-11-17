@@ -4,12 +4,17 @@
 #include <iostream>
 
 char printMenu(); //signing PrintMenu
+void fahrenheitToCelcius(); // signing fahrenheitToCelcius
 
 int main()
 {
 	char userChoice; //letter for user to pick conversion
 	userChoice = printMenu(); //only print the menu once
 
+	if (userChoice == 'f')
+	{
+		fahrenheitToCelcius();
+	}
 
 
 
@@ -32,4 +37,21 @@ char printMenu() // written by both
 
 	std::cin >> choice;
 	return choice;
+}
+
+void fahrenheitToCelcius()
+{
+	// variables
+	float fahrenheit = 0.0f;
+	float celcius = 0.0f;
+
+	// user input
+	std::cout << "Enter your temperature in fahrenheit: ";
+	std::cin >> fahrenheit;
+
+	// math
+	celcius = (fahrenheit - 32) * 5 / 9;
+
+	// result
+	std::cout << "Your temperature in celcius is " << celcius;
 }
