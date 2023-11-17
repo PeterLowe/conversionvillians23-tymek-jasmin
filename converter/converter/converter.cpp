@@ -5,6 +5,7 @@
 
 char printMenu(); //signing PrintMenu
 void fahrenheitToCelcius(); // signing fahrenheitToCelcius
+void centimetersToFeetInches(); //signing centimetersToFeetInches
 void degreesToRadians(); //singing degrees
 
 int main()
@@ -12,15 +13,22 @@ int main()
 	char userChoice; //letter for user to pick conversion
 	userChoice = printMenu(); //only print the menu once
 
+	if (userChoice == 'A')
+	{
+		degreesToRadians();
+	}
+
+	if (userChoice == 'B')
+	{
+		centimetersToFeetInches();
+	}
+
 	if (userChoice == 'f')
 	{
 		fahrenheitToCelcius();
 	}
 
-	if (userChoice == 'A')
-	{
-		degreesToRadians();
-	}
+
 
 	return 1;
 }
@@ -58,6 +66,26 @@ void fahrenheitToCelcius()
 
 	// result
 	std::cout << "Your temperature in celcius is " << celcius;
+}
+
+void centimetersToFeetInches() //written by tymek
+{
+	//variables
+	float centimetres = 0.0f;
+	float feet = 0.0f;
+	int fullFeet = 0;
+	float inches = 0.0f;
+
+	std::cout << "Enter distance in centimetres: ";
+	std::cin >> centimetres;
+
+	inches = centimetres / 2.54f;
+	feet = inches / 12.0f;
+	fullFeet = feet;
+	inches = inches - (12 * fullFeet);
+
+
+	std::cout << centimetres << "in feet and inches is " << fullFeet << " feet " << inches << " inches";
 }
 
 void degreesToRadians() //written by tymek
