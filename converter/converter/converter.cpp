@@ -1,4 +1,5 @@
 //tymoteusz walichnowski
+//jasmin suter
 
 int main()
 {
