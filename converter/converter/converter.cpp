@@ -24,6 +24,11 @@ int main()
 		centimetersToFeetInches();
 	}
 
+	if (userChoice == 'e')
+	{
+		stoneAndPoundsToKilograms();
+	}
+
 	if (userChoice == 'f')
 	{
 		fahrenheitToCelcius();
@@ -31,10 +36,6 @@ int main()
 
 
 
-	if (userChoice == 'e')
-	{
-		stoneAndPoundsToKilograms();
-	}
 
 	return 1;
 }
@@ -94,20 +95,6 @@ void centimetersToFeetInches() //written by tymek
 	std::cout << centimetres << "in feet and inches is " << fullFeet << " feet " << inches << " inches";
 }
 
-void degreesToRadians() //written by tymek
-{
-	//variables
-	float degrees = 0.0f;
-	float radians = 0.0f;
-
-	std::cout << "Please input angle in degrees: ";
-	std::cin >> degrees;
-
-	radians = degrees * (3.14159 / 180);
-
-	std::cout << degrees << "degrees in radians is " << radians;
-}
-
 void stoneAndPoundsToKilograms() // written by jasmin
 {
 	// variables
@@ -127,3 +114,18 @@ void stoneAndPoundsToKilograms() // written by jasmin
 	// result
 	std::cout << "Your weight in kilograms is " << kilograms;
 }
+
+void degreesToRadians() //written by tymek
+{
+	//variables
+	float degrees = 0.0f;
+	float radians = 0.0f;
+
+	std::cout << "Please input angle in degrees: ";
+	std::cin >> degrees;
+
+	radians = degrees * (3.14159 / 180);
+
+	std::cout << degrees << "degrees in radians is " << radians;
+}
+
