@@ -5,6 +5,7 @@
 
 char printMenu(); //signing PrintMenu
 void fahrenheitToCelcius(); // signing fahrenheitToCelcius
+void degreesToRadians(); //singing degrees
 
 int main()
 {
@@ -16,7 +17,10 @@ int main()
 		fahrenheitToCelcius();
 	}
 
-
+	if (userChoice == 'A')
+	{
+		degreesToRadians();
+	}
 
 	return 1;
 }
@@ -54,4 +58,18 @@ void fahrenheitToCelcius()
 
 	// result
 	std::cout << "Your temperature in celcius is " << celcius;
+}
+
+void degreesToRadians() //written by tymek
+{
+	//variables
+	float degrees = 0.0f;
+	float radians = 0.0f;
+
+	std::cout << "Please input angle in degrees: ";
+	std::cin >> degrees;
+
+	radians = degrees * (3.14159 / 180);
+
+	std::cout << degrees << "degrees in radians is " << radians;
 }
