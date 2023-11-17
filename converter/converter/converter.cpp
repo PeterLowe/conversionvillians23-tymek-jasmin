@@ -4,13 +4,17 @@
 #include <iostream>
 
 char printMenu(); //signing PrintMenu
+void degreesToRadians(); //singing degrees
 
 int main()
 {
 	char userChoice; //letter for user to pick conversion
 	userChoice = printMenu(); //only print the menu once
 
-
+	if (userChoice == 'A')
+	{
+		degreesToRadians();
+	}
 
 
 	return 1;
@@ -28,4 +32,19 @@ char printMenu() //written by tymek
 	std::cout << "Enter your Choice : ";
 	std::cin >> choice;
 	return choice;
+}
+
+void degreesToRadians() //written by tymek
+{
+	//variables
+	float degrees = 0.0f;
+	float radians = 0.0f;
+
+	std::cout << "Please input angle in degrees: ";
+	std::cin >> degrees;
+
+	radians = degrees * (3.14159 / 180);
+
+	std::cout << degrees << "degrees in radians is " << radians;
+
 }
